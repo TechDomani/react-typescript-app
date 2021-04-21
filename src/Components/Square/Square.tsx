@@ -2,7 +2,7 @@ import React from 'react';
 import './Square.css';
 
 export interface SquareProps {
-    value: string;
+    value: string | null;
     updateValue: () => void 
 }
 

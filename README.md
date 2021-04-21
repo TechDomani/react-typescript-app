@@ -1,3 +1,8 @@
+# Run individual file
+
+tsc.cmd  src/Helper/CalculateWinner.tsx
+node  src/Helper/CalculateWinner.js
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

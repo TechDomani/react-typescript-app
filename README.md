@@ -1,6 +1,6 @@
 # Run individual file
 
-tsc.cmd  src/Helper/CalculateWinner.tsx
+tsc.cmd  src/Helper/CalculateWinner.ts
 node  src/Helper/CalculateWinner.js
 
 # Getting Started with Create React App

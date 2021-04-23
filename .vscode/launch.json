@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Debug CRA Tests",
+        "type": "node",
+        "request": "launch",
+        "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/react-scripts",
+        "args": ["test", "--runInBand", "--no-cache", "--watchAll=false"],
+        "cwd": "${workspaceRoot}",
+        "protocol": "inspector",
+        "console": "integratedTerminal",
+        "internalConsoleOptions": "neverOpen",
+        "env": { "CI": "true" },
+        "disableOptimisticBPs": true
+      },
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "Launch Program",
+        "program": "${workspaceFolder}/src/Helper/Challenge.ts",
+        "preLaunchTask": "tsc: build - tsconfig.json",
+        "outFiles": ["${workspaceFolder}/out/**/*.js"]
+      }
+    ]
+  }

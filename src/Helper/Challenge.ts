@@ -1,4 +1,4 @@
-const validBraces = (braces: string): boolean => {
+export const validBraces = (braces: string): boolean => {
   let stack: string[] = [];
   let start: string[] = ['{', '[', '('];
   let end: string[] = ['}', ']', ')'];
@@ -25,4 +25,14 @@ const validBraces = (braces: string): boolean => {
   return stack.length === 0;
 }
 
-export default validBraces;
+export const fizzBuzz = (num: number): string => {
+  let ret = '';
+  if (num % 3 == 0){
+    ret += 'Fizz';
+  } 
+  if (num % 5 == 0){
+    ret += 'Buzz';
+  }
+  ret = ret.length > 0 ? ret : num.toString();
+  return ret;
+}

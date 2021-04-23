@@ -25,9 +25,4 @@ const validBraces = (braces: string): boolean => {
   return stack.length === 0;
 }
 
-//console.log(validBraces('(())'));
-//console.log(validBraces(')()('));
-console.log(validBraces('[(])'));
-//console.log(validBraces("()")); 
-
 export default validBraces;

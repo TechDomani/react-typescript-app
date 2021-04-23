@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import Square from '../Square/Square';
-import calculateWinner from '../../Helper/CalculateWinner';
+import calculateWinner from '../../Helper/CalculateWinner'
 
 const Board = () => {
 

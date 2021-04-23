@@ -17,10 +17,13 @@
       {
         "type": "node",
         "request": "launch",
-        "name": "Launch Program",
-        "program": "${workspaceFolder}/src/Helper/Challenge.ts",
-        "preLaunchTask": "tsc: build - tsconfig.json",
-        "outFiles": ["${workspaceFolder}/out/**/*.js"]
+        "name": "Jest run named file",
+        "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+        "args": [
+        "Challenge.test.ts",
+        ],
+        "console": "integratedTerminal",
+        "internalConsoleOptions": "neverOpen"
       }
     ]
   }

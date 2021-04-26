@@ -36,3 +36,21 @@ export const fizzBuzz = (num: number): string => {
   ret = ret.length > 0 ? ret : num.toString();
   return ret;
 }
+
+export const anagram = (words: string[]): string[][] => {
+  let sortedWords = new Map<string, string[]>();
+  words.forEach((w) => {
+    const letters = w.split('');
+    let key = letters.sort().join('');
+    let val = sortedWords.get(key);
+    if (val){
+      val.push(w);      
+    } else {
+      val = [w];
+    }
+    sortedWords.set(key, val);
+  })
+  let values = Array.from(sortedWords.values());    
+  //console.log(values);
+  return values;
+}

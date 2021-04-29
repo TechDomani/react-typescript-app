@@ -1,3 +1,28 @@
+export const descendingOrder = (n: number) : number => {
+  let nums = n.toString().split('');
+  nums  = nums.sort((a, b) => Number(b) - (Number(a)))
+  let ret = Number(nums.join(''))
+  return ret;
+}
+
+export const spinWords = (words: string) : string => {
+  let wordArray = words.split(' ');
+  for (let i=0; i< wordArray.length; i++){
+    if (wordArray[i].length > 4){
+      let letters = wordArray[i].split('');
+      let reversedWord = "";
+      for (let j = letters.length - 1; j >= 0; j--){
+         reversedWord += letters[j];
+      }
+      wordArray[i] = reversedWord;
+    }  
+  }
+  let ret = wordArray.join(' ');
+  console.log(ret);
+  return ret;
+}
+
+
 export const validBraces = (braces: string): boolean => {
   let stack: string[] = [];
   let start: string[] = ['{', '[', '('];
